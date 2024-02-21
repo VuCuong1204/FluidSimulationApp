@@ -10,10 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        glSurfaceView = GLSurfaceView(this).apply {
-            setEGLContextClientVersion(2)
-            setRenderer(FluidRenderer())
-        }
+        glSurfaceView = CustomGLSurfaceView(this)
         setContentView(glSurfaceView)
     }
 
